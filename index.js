@@ -5,20 +5,8 @@ import {ContaCorrente} from "./ContaCorrente.js"
 const cliente1 = new Cliente("Anne", 11111111111);
 const cliente2 = new Cliente("João", 22222222222);
 
-console.log(cliente1);
-console.log(cliente2);
-
-const contaCorrenteAnne = new ContaCorrente();
-const contaCorrenteJoão = new ContaCorrente();
-
-contaCorrenteAnne.agencia=1001;
-contaCorrenteAnne.cliente=cliente1;
-console.log(contaCorrenteAnne);
-contaCorrenteAnne.depositar(500);
-
-contaCorrenteJoão.agencia=1001;
-contaCorrenteJoão.cliente=cliente2;
-console.log(contaCorrenteJoão);
+const contaCorrenteAnne = new ContaCorrente(1001, cliente1);
+const contaCorrenteJoão = new ContaCorrente(1001, cliente2);
 
 
 //Realizando saque na conta da Anne;
