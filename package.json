@@ -1,0 +1,22 @@
+{
+  "name": "bytebank",
+  "version": "1.0.0",
+  "description": "Projeto do butebank para seus clientes",
+  "main": "index.js",
+  "scripts": {
+    //comando que colocariamos no terminal
+    "start": "node index.js"
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/annekarolinefc/javascript-orientacao-objetos-ALURA.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "type": "module",
+  "bugs": {
+    "url": "https://github.com/annekarolinefc/javascript-orientacao-objetos-ALURA/issues"
+  },
+  "homepage": "https://github.com/annekarolinefc/javascript-orientacao-objetos-ALURA#readme"
+}
