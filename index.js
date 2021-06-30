@@ -1,3 +1,5 @@
+import { Cliente } from "./Cliente";
+import { ContaCorrente } from "./contaCorrente";
 
 //INSTANCIANDO UMA CLASSE
 const cliente1 = new Cliente();
