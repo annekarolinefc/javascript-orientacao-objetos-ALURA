@@ -2,14 +2,8 @@ import {Cliente} from "./Cliente.js"
 import {ContaCorrente} from "./ContaCorrente.js"
 
 //INSTANCIANDO UMA CLASSE
-const cliente1 = new Cliente();
-const cliente2 = new Cliente();
-
-cliente1.nome="Anne";
-cliente1.cpf=11111111111;
-
-cliente2.nome = "Joao";
-cliente2.cpf = 22222222222;
+const cliente1 = new Cliente("Anne", 11111111111);
+const cliente2 = new Cliente("João", 22222222222);
 
 console.log(cliente1);
 console.log(cliente2);
@@ -51,3 +45,8 @@ contaCorrenteAnne.transferir(valor, conta2)
 //conta2.saldo=3000; -> somente leitura. nao tem como atribuir. 
 //nao possui metodo set, somente get
 console.log(conta2.saldo);
+
+
+//Intancia de uma classe utilizando cosntrutor
+const novoCliente = new Cliente("Pedro", 333333333333);
+console.log(novoCliente);
