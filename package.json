@@ -4,8 +4,7 @@
   "description": "Projeto do butebank para seus clientes",
   "main": "index.js",
   "scripts": {
-    //comando que colocariamos no terminal
-    "start": "node index.js"
+    "start": "node index.js",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "repository": {

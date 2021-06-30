@@ -1,5 +1,5 @@
-import { Cliente } from "./Cliente";
-import { ContaCorrente } from "./ContaCorrente";
+import {Cliente} from "./Cliente.js"
+import {ContaCorrente} from "./ContaCorrente.js"
 
 //INSTANCIANDO UMA CLASSE
 const cliente1 = new Cliente();
@@ -18,9 +18,12 @@ const contaCorrenteAnne = new ContaCorrente();
 const contaCorrenteJoão = new ContaCorrente();
 
 contaCorrenteAnne.agencia=1001;
+contaCorrenteAnne.cliente=cliente1;
 console.log(contaCorrenteAnne);
+contaCorrenteAnne.depositar(500);
 
 contaCorrenteJoão.agencia=1001;
+contaCorrenteJoão.cliente=cliente2;
 console.log(contaCorrenteJoão);
 
 
@@ -31,3 +34,13 @@ console.log(`Valor sacado: ${valorSacado}`)
 
 //Realizando deposito na conta da Anne;
 contaCorrenteAnne.depositar(250);
+
+//CRIANDO CONTA 2
+const conta2 = new ContaCorrente();
+conta2.cliente=cliente2;
+conta2.agencia=1002;
+console.log(conta2);
+
+//TRANSFERINDO DINHEIRO DA CONTA DA ANNE PARA CONTA 2
+contaCorrenteAnne.transferir(200,conta2);
+console.log(conta2);
