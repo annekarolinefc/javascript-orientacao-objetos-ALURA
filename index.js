@@ -7,12 +7,20 @@ class Cliente{
 
 class ContaCorrente{
     agencia;
-    saldo;
+    _saldo = 0;
 
     sacar(valor){
-        if(this.saldo >= valor){
-            this.saldo -= valor;
+        if(this._saldo >= valor){
+            this._saldo -= valor;
+            console.log(`Saldo: ${contaCorrenteAnne._saldo}`);
         }
+    }
+
+    depositar(valor){
+        if(valor>0){
+            this._saldo += valor;
+            console.log(`Saldo: ${contaCorrenteAnne._saldo}`);
+        }//Regra de negocio: nao aceita valor negativo.
     }
 }
 
@@ -32,18 +40,17 @@ console.log(cliente2);
 const contaCorrenteAnne = new ContaCorrente();
 const contaCorrenteJoão = new ContaCorrente();
 
-contaCorrenteAnne.saldo=0;
 contaCorrenteAnne.agencia=1001;
 console.log(contaCorrenteAnne);
 
-contaCorrenteJoão.saldo=0;
 contaCorrenteJoão.agencia=1001;
 console.log(contaCorrenteJoão);
 
 
 //Realizando saque na conta da Anne;
-console.log(contaCorrenteAnne.saldo);
-contaCorrenteAnne.saldo=100;
-console.log(contaCorrenteAnne.saldo);
+contaCorrenteAnne._saldo=100;
 contaCorrenteAnne.sacar(50);
-console.log(contaCorrenteAnne.saldo);
+
+
+//Realizando deposito na conta da Anne;
+contaCorrenteAnne.depositar(250);
